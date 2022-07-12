@@ -81,5 +81,6 @@ const styles = StyleSheet.create({
    forgotText: {
       textAlign: 'right',
       paddingRight: 7,
+      color: '#7360e3',
    },
 });
