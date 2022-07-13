@@ -1,8 +1,8 @@
 # CAM
-Cinema and Me
-Application mobile pour visionner les films.
-##Les screens : 
+Cinema and Me<br>
+Application mobile pour visionner les films.<br>
+##Les screens : <br>
 -Login<br>
--Register
--Listes des salles de cinéma
--Reservation place 
+-Register<br>
+-Listes des salles de cinéma<br>
+-Reservation place <br>
