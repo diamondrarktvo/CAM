@@ -21,7 +21,6 @@ export default function Home() {
                      <Text style={styles.icon_user}>D</Text>
                   </TouchableOpacity>
                </View>
-               <Text style={{ flex: 1 }}>{TOKENTMDB}</Text>
             </View>
          </View>
       </KeyboardAwareScrollView>
@@ -41,23 +40,23 @@ const styles = StyleSheet.create({
    },
    content_head: {
       flex: 1,
-      height: 60,
       flexDirection: 'row',
       justifyContent: 'space-around',
    },
    search_bar: {
-      width: 260,
+      width: 250,
       backgroundColor: Colors.grey,
       borderRadius: 20,
    },
    icon_user: {
-      flex: 1,
       backgroundColor: Colors.purple,
-      fontSize: 42,
+      fontSize: 27,
       fontWeight: 'bold',
-      width: 60,
+      width: 40,
+      height: 40,
+      marginVertical: 10,
       textAlign: 'center',
-      borderRadius: 50,
+      borderRadius: 40,
       color: Colors.white,
    },
 });
