@@ -1,4 +1,5 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { TOKENTMDB } from '@env';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { SearchBar } from '@rneui/themed';
 import { Colors } from '../../theme/Colors';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
@@ -16,8 +17,11 @@ export default function Home() {
                      placeholder="Search ..."
                      cancelIcon
                   />
-                  <Text style={styles.icon_user}>D</Text>
+                  <TouchableOpacity activeOpacity={0.7}>
+                     <Text style={styles.icon_user}>D</Text>
+                  </TouchableOpacity>
                </View>
+               <Text style={{ flex: 1 }}>{TOKENTMDB}</Text>
             </View>
          </View>
       </KeyboardAwareScrollView>
@@ -30,26 +34,28 @@ const styles = StyleSheet.create({
       backgroundColor: Colors.background,
    },
    view_content: {
+      flex: 1,
       flexDirection: 'column',
       marginHorizontal: 10,
       marginVertical: 40,
    },
    content_head: {
+      flex: 1,
       height: 60,
       flexDirection: 'row',
-      justifyContent: 'space-between',
+      justifyContent: 'space-around',
    },
    search_bar: {
+      width: 260,
       backgroundColor: Colors.grey,
       borderRadius: 20,
-      width: 270,
    },
    icon_user: {
+      flex: 1,
       backgroundColor: Colors.purple,
-      fontSize: 40,
+      fontSize: 42,
       fontWeight: 'bold',
       width: 60,
-      height: 60,
       textAlign: 'center',
       borderRadius: 50,
       color: Colors.white,
