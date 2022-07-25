@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { SearchBar } from '@rneui/themed';
 import { Colors } from '../../theme/Colors';
 
-export default function Header() {
+export default function HeaderSearch() {
    return (
       <View style={styles.container}>
          <SearchBar
