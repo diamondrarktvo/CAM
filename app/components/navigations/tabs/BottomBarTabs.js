@@ -1,14 +1,12 @@
 import { StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Colors } from '../../../theme/Colors';
-//importation du top navigation
-import TopTabs from './TopTabs';
+import { Icon } from '@rneui/themed';
 
 //import screen bottom tab
 import Home from '../../../pages/home/Home';
 import Profil from '../../../pages/profil/Profil';
 import Search from '../../../pages/search/Search';
-import { Icon } from '@rneui/themed';
 
 const Tab = createBottomTabNavigator();
 
@@ -65,7 +63,6 @@ const styles = StyleSheet.create({
       margin: 10,
       backgroundColor: Colors.background,
       height: 60,
-      paddingTop: 5,
-      paddingBottom: 6,
+      padding: 5,
    },
 });

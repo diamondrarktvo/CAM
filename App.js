@@ -10,7 +10,6 @@ export default function App() {
             <StatusBar
                backgroundColor={Colors.background}
                animated={true}
-               showHideTransition="slide"
                barStyle="dark-content"
             />
             <Navigation />

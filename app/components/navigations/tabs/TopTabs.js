@@ -2,10 +2,10 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import { Colors } from '../../../theme/Colors';
 //importation des vues pour le top navigation
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import Movie from '../viewForTopTabsNavigation/Movie';
-import Anime from '../viewForTopTabsNavigation/Anime';
-import Kids from '../viewForTopTabsNavigation/Kids';
-import Serie from '../viewForTopTabsNavigation/Serie';
+import Movie from '../viewForTopTabsNavigation/movie/Movie';
+import Anime from '../viewForTopTabsNavigation/anime/Anime';
+import Kids from '../viewForTopTabsNavigation/kids/Kids';
+import Serie from '../viewForTopTabsNavigation/serie/Serie';
 
 const Tab = createMaterialTopTabNavigator();
 
