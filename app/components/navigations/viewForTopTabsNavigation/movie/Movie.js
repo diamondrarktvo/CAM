@@ -16,7 +16,11 @@ export default function Movie() {
                   onPress={() => alert('clicker')}
                />
             </View>
-            <ItemComponent />
+            <View style={styles.caroussel}>
+               <ItemComponent />
+               <ItemComponent />
+               <ItemComponent />
+            </View>
          </View>
       </View>
    );
@@ -28,6 +32,7 @@ const styles = StyleSheet.create({
       marginHorizontal: 10,
    },
    section: {
+      flex: 1,
       marginVertical: 5,
    },
    titre_indicatif: {
@@ -38,5 +43,8 @@ const styles = StyleSheet.create({
    titre_txt: {
       fontSize: 24,
       fontWeight: 'bold',
+   },
+   caroussel: {
+      flexDirection: 'row',
    },
 });
