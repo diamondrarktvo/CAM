@@ -5,7 +5,7 @@ import Section from '../../../sectionWithCarousel/SectionWithCarousel';
 
 export default function Movie() {
    return (
-      <ScrollView style={styles.scrolview}>
+      <ScrollView>
          <View style={styles.view_container}>
             <Section annonce={true} dataForCarousel={data} />
             <Section
