@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { Icon } from '@rneui/themed';
-import ItemComponent from '../../../oneItemTemplate/ItemComponent';
 import { Colors } from '../../../../theme/Colors';
 
 export default function Anime() {
@@ -15,7 +14,6 @@ export default function Anime() {
                onPress={() => alert('clicker')}
             />
          </View>
-         <ItemComponent />
       </View>
    );
 }

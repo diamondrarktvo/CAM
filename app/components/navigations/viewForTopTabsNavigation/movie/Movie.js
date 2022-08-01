@@ -1,7 +1,7 @@
 import { Text, View, StyleSheet } from 'react-native';
 import { Icon } from '@rneui/themed';
-import ItemComponent from '../../../oneItemTemplate/ItemComponent';
 import { Colors } from '../../../../theme/Colors';
+import Caroussel from './../../../carousel/Caroussel';
 
 export default function Movie() {
    return (
@@ -16,11 +16,7 @@ export default function Movie() {
                   onPress={() => alert('clicker')}
                />
             </View>
-            <View style={styles.caroussel}>
-               <ItemComponent />
-               <ItemComponent />
-               <ItemComponent />
-            </View>
+            <Caroussel annonce={false} />
          </View>
       </View>
    );
@@ -43,8 +39,5 @@ const styles = StyleSheet.create({
    titre_txt: {
       fontSize: 24,
       fontWeight: 'bold',
-   },
-   caroussel: {
-      flexDirection: 'row',
    },
 });
