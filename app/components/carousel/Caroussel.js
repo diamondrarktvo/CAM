@@ -1,17 +1,9 @@
 import React from 'react';
 import Carousel from 'react-native-snap-carousel';
-import {
-   Dimensions,
-   SafeAreaView,
-   StyleSheet,
-   Image,
-   Text,
-   View,
-} from 'react-native';
+import { SafeAreaView, StyleSheet, Image, Text, View } from 'react-native';
 import { Colors } from './../../theme/Colors';
-import { data } from '../../utils/data';
 
-export default function Caroussel({ annonce }) {
+export default function Caroussel({ data, annonce }) {
    const isCarousel = React.useRef(null);
 
    const _renderItem = ({ item }) => {
@@ -39,6 +31,13 @@ export default function Caroussel({ annonce }) {
                layout="default"
                ref={isCarousel}
                data={data}
+               //ces props son utiles si la section est de type annonce
+               autoplay={annonce ? true : false}
+               autoplayDelay={annonce ? 1000 : null}
+               autoplayInterval={annonce ? 2000 : null}
+               loop={annonce ? true : false}
+               loopClonesPerSide={5} //Nombre de clones à ajouter de chaque côté des éléments d'origine. Lors d'un balayage très rapide
+               //fin des props spéficifique au section annonce
                renderItem={_renderItem}
                sliderWidth={150}
                itemWidth={annonce === false ? 145 : 160}

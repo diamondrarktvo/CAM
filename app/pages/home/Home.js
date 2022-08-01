@@ -33,5 +33,6 @@ const styles = StyleSheet.create({
    },
    body_content: {
       flex: 1,
+      marginBottom: 65,
    },
 });
