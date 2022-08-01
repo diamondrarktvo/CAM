@@ -42,8 +42,8 @@ export default function Caroussel({ annonce }) {
                renderItem={_renderItem}
                sliderWidth={150}
                itemWidth={annonce === false ? 145 : 160}
-               inactiveSlideOpacity={0.9}
-               inactiveSlideScale={1}
+               inactiveSlideOpacity={0.9} //on uniformise tous les opacity
+               inactiveSlideScale={1} //on uniformise tous les hauteur
                useScrollView={true}
             />
          </View>
@@ -51,15 +51,17 @@ export default function Caroussel({ annonce }) {
    );
 }
 
+//on met le width du carousel plus petit et on met à 100% le width du view qui l'englobe
 const styles = StyleSheet.create({
    view_carousel: {
       width: '100%',
       flexDirection: 'row',
    },
+   //la taille de l'image est différent selon la section à afficher
    poster_image: {
       height: 160,
       width: 140,
-      borderRadius: 10,
+      borderRadius: 20,
    },
    poster_image_annonce: {
       height: 200,
@@ -67,8 +69,10 @@ const styles = StyleSheet.create({
       borderRadius: 10,
    },
    titre_film: {
-      fontSize: 20,
+      fontSize: 16,
+      fontWeight: 'bold',
       color: Colors.black,
-      textAlign: 'center',
+      textAlign: 'left',
+      marginLeft: 10,
    },
 });
