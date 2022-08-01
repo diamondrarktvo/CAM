@@ -1,12 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Login from './app/pages/auth/Login';
+import { Colors } from './app/theme/Colors';
+import { StyleSheet, View, StatusBar } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import Navigation from './app/components/navigations/Navigation';
 
 export default function App() {
    return (
-      <View style={styles.container}>
-         <Login />
-      </View>
+      <SafeAreaProvider>
+         <View style={styles.container}>
+            <StatusBar
+               backgroundColor={Colors.background}
+               animated={true}
+               barStyle="dark-content"
+            />
+            <Navigation />
+         </View>
+      </SafeAreaProvider>
    );
 }
 
