@@ -7,7 +7,7 @@ export default function Caroussel({ data, annonce }) {
    const isCarousel = React.useRef(null);
 
    const _renderItem = ({ item }) => {
-      return (
+      return item.type === 'film' ? (
          <View key={item.id}>
             <Image
                style={
@@ -15,11 +15,24 @@ export default function Caroussel({ data, annonce }) {
                      ? styles.poster_image
                      : styles.poster_image_annonce
                }
-               source={item.urlImage} //require(film.urlImage) si path absolue et {{ uri : urlImage}} si lien
+               source={item.poster_path} //require(film.urlImage) si path absolue et {{ uri : urlImage}} si lien
             />
             {annonce === false && (
-               <Text style={styles.titre_film}>{item.titre}</Text>
+               <Text style={styles.titre_film}>{item.title}</Text>
             )}
+         </View>
+      ) : (
+         <View style={{ position: 'relative' }} key={item.id}>
+            <Image
+               style={styles.poster_genre}
+               source={item.poster_path} //require(film.urlImage) si path absolue et {{ uri : urlImage}} si lien
+            />
+            <View
+               style={[StyleSheet.absoluteFillObject, styles.maskImageGenre]} //absoluteFillObject est une propriété reduisant l'écriture avec les propriétés position : absoluteFillObject de css
+            ></View>
+            <Text style={[StyleSheet.absoluteFillObject, styles.nom_genre]}>
+               {item.nom}
+            </Text>
          </View>
       );
    };
@@ -40,7 +53,7 @@ export default function Caroussel({ data, annonce }) {
                //fin des props spéficifique au section annonce
                renderItem={_renderItem}
                sliderWidth={150}
-               itemWidth={annonce === false ? 145 : 160}
+               itemWidth={annonce === false ? 145 : 190}
                inactiveSlideOpacity={0.9} //on uniformise tous les opacity
                inactiveSlideScale={1} //on uniformise tous les hauteur
                useScrollView={true}
@@ -63,8 +76,8 @@ const styles = StyleSheet.create({
       borderRadius: 20,
    },
    poster_image_annonce: {
-      height: 200,
-      width: 150,
+      height: 230,
+      width: 180,
       borderRadius: 10,
    },
    titre_film: {
@@ -73,5 +86,23 @@ const styles = StyleSheet.create({
       color: Colors.black,
       textAlign: 'left',
       marginLeft: 10,
+   },
+   poster_genre: {
+      height: 90,
+      width: 140,
+      borderRadius: 20,
+   },
+   maskImageGenre: {
+      backgroundColor: 'rgba(0, 0, 0, 0.6)',
+      borderRadius: 20,
+      width: 140,
+   },
+   nom_genre: {
+      fontWeight: 'bold',
+      opacity: 0.9,
+      color: Colors.white,
+      fontSize: 24,
+      textAlign: 'center',
+      top: 25,
    },
 });

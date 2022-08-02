@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet } from 'react-native';
 import { Icon } from '@rneui/themed';
-import Caroussel from '../carousel/Caroussel';
-import { Colors } from '../../theme/Colors';
+import Caroussel from '../../carousel/Caroussel';
+import { Colors } from '../../../theme/Colors';
 
 export default function Section({ annonce, titreSection, dataForCarousel }) {
    return (

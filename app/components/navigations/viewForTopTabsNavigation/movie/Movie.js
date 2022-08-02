@@ -1,22 +1,27 @@
 import { Text, View, StyleSheet, ScrollView } from 'react-native';
 import { Colors } from '../../../../theme/Colors';
-import { data } from '../../../../utils/data';
-import Section from '../../../sectionWithCarousel/SectionWithCarousel';
+import { film, genres } from '../../../../utils/data';
+import Section from '../../../reused/sectionWithCarousel/SectionWithCarousel';
 
 export default function Movie() {
    return (
       <ScrollView>
          <View style={styles.view_container}>
-            <Section annonce={true} dataForCarousel={data} />
+            <Section annonce={true} dataForCarousel={film} />
             <Section
                annonce={false}
                titreSection="Populaire"
-               dataForCarousel={data}
+               dataForCarousel={film}
             />
             <Section
                annonce={false}
                titreSection="Nouveautés"
-               dataForCarousel={data}
+               dataForCarousel={film}
+            />
+            <Section
+               annonce={false}
+               titreSection="Genre"
+               dataForCarousel={genres}
             />
          </View>
       </ScrollView>
