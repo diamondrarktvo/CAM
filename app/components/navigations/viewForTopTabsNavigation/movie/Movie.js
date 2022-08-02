@@ -1,43 +1,30 @@
-import { Text, View, StyleSheet } from 'react-native';
-import { Icon } from '@rneui/themed';
+import { Text, View, StyleSheet, ScrollView } from 'react-native';
 import { Colors } from '../../../../theme/Colors';
-import Caroussel from './../../../carousel/Caroussel';
+import { data } from '../../../../utils/data';
+import Section from '../../../sectionWithCarousel/SectionWithCarousel';
 
 export default function Movie() {
    return (
-      <View style={styles.view_container}>
-         <View style={styles.section}>
-            <View style={styles.titre_indicatif}>
-               <Text style={styles.titre_txt}>Populaire</Text>
-               <Icon
-                  name={'chevron-right'}
-                  color={Colors.black}
-                  size={32}
-                  onPress={() => alert('clicker')}
-               />
-            </View>
-            <Caroussel annonce={false} />
+      <ScrollView>
+         <View style={styles.view_container}>
+            <Section annonce={true} dataForCarousel={data} />
+            <Section
+               annonce={false}
+               titreSection="Populaire"
+               dataForCarousel={data}
+            />
+            <Section
+               annonce={false}
+               titreSection="Nouveautés"
+               dataForCarousel={data}
+            />
          </View>
-      </View>
+      </ScrollView>
    );
 }
 
 const styles = StyleSheet.create({
    view_container: {
       flex: 1,
-      marginHorizontal: 10,
-   },
-   section: {
-      flex: 1,
-      marginVertical: 5,
-   },
-   titre_indicatif: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      marginVertical: 10,
-   },
-   titre_txt: {
-      fontSize: 24,
-      fontWeight: 'bold',
    },
 });

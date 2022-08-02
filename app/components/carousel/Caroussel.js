@@ -1,17 +1,9 @@
 import React from 'react';
 import Carousel from 'react-native-snap-carousel';
-import {
-   Dimensions,
-   SafeAreaView,
-   StyleSheet,
-   Image,
-   Text,
-   View,
-} from 'react-native';
+import { SafeAreaView, StyleSheet, Image, Text, View } from 'react-native';
 import { Colors } from './../../theme/Colors';
-import { data } from '../../utils/data';
 
-export default function Caroussel({ annonce }) {
+export default function Caroussel({ data, annonce }) {
    const isCarousel = React.useRef(null);
 
    const _renderItem = ({ item }) => {
@@ -39,11 +31,18 @@ export default function Caroussel({ annonce }) {
                layout="default"
                ref={isCarousel}
                data={data}
+               //ces props son utiles si la section est de type annonce
+               autoplay={annonce ? true : false}
+               autoplayDelay={annonce ? 1000 : null}
+               autoplayInterval={annonce ? 2000 : null}
+               loop={annonce ? true : false}
+               loopClonesPerSide={5} //Nombre de clones à ajouter de chaque côté des éléments d'origine. Lors d'un balayage très rapide
+               //fin des props spéficifique au section annonce
                renderItem={_renderItem}
                sliderWidth={150}
                itemWidth={annonce === false ? 145 : 160}
-               inactiveSlideOpacity={0.9}
-               inactiveSlideScale={1}
+               inactiveSlideOpacity={0.9} //on uniformise tous les opacity
+               inactiveSlideScale={1} //on uniformise tous les hauteur
                useScrollView={true}
             />
          </View>
@@ -51,15 +50,17 @@ export default function Caroussel({ annonce }) {
    );
 }
 
+//on met le width du carousel plus petit et on met à 100% le width du view qui l'englobe
 const styles = StyleSheet.create({
    view_carousel: {
       width: '100%',
       flexDirection: 'row',
    },
+   //la taille de l'image est différent selon la section à afficher
    poster_image: {
       height: 160,
       width: 140,
-      borderRadius: 10,
+      borderRadius: 20,
    },
    poster_image_annonce: {
       height: 200,
@@ -67,8 +68,10 @@ const styles = StyleSheet.create({
       borderRadius: 10,
    },
    titre_film: {
-      fontSize: 20,
+      fontSize: 16,
+      fontWeight: 'bold',
       color: Colors.black,
-      textAlign: 'center',
+      textAlign: 'left',
+      marginLeft: 10,
    },
 });
