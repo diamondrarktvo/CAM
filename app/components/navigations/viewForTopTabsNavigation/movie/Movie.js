@@ -10,7 +10,7 @@ export default function Movie() {
             <Section annonce={true} dataForCarousel={film} />
             <Section
                annonce={false}
-               titreSection="Populaire"
+               titreSection="Populaires"
                dataForCarousel={film}
             />
             <Section
@@ -20,7 +20,12 @@ export default function Movie() {
             />
             <Section
                annonce={false}
-               titreSection="Genre"
+               titreSection="Tendances"
+               dataForCarousel={film}
+            />
+            <Section
+               annonce={false}
+               titreSection="Genres"
                dataForCarousel={genres}
             />
          </View>
