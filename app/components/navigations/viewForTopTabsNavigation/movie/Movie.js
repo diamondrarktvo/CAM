@@ -1,7 +1,7 @@
-import { Text, View, StyleSheet, ScrollView } from 'react-native';
-import { Colors } from '_theme/Colors';
+import { Text, View, ScrollView } from 'react-native';
 import { film, genres } from '_utils/data';
-import Section from '_components/reused/sectionWithCarousel/SectionWithCarousel';
+import Section from '_components/reusable/sectionWithCarousel/SectionWithCarousel';
+import { styles } from './style';
 
 export default function Movie() {
    return (
@@ -32,9 +32,3 @@ export default function Movie() {
       </ScrollView>
    );
 }
-
-const styles = StyleSheet.create({
-   view_container: {
-      flex: 1,
-   },
-});

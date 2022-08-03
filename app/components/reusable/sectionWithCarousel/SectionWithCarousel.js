@@ -1,7 +1,8 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
 import { Icon } from '@rneui/themed';
 import Caroussel from '_components/carousel/Caroussel';
 import { Colors } from '_theme/Colors';
+import { styles } from './styles';
 
 export default function Section({ annonce, titreSection, dataForCarousel }) {
    return (
@@ -21,19 +22,3 @@ export default function Section({ annonce, titreSection, dataForCarousel }) {
       </View>
    );
 }
-
-const styles = StyleSheet.create({
-   section: {
-      marginVertical: 10,
-   },
-   titre_indicatif: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      marginVertical: 5,
-      marginHorizontal: 10,
-   },
-   titre_txt: {
-      fontSize: 24,
-      fontWeight: 'bold',
-   },
-});
