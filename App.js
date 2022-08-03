@@ -1,3 +1,4 @@
+import './ignoreWarning';
 import { Colors } from './app/theme/Colors';
 import { StyleSheet, View, StatusBar } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
