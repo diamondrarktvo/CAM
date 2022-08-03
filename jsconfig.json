@@ -1,0 +1,13 @@
+//configure 'Alias' path for files in React Native
+{
+   "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+         "_components": ["app/components"],
+         "_images": ["app/images"],
+         "_pages": ["app/images"],
+         "_theme": ["app/theme"],
+         "_utils": ["app/utils"]
+      }
+   }
+}

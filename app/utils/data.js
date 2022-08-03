@@ -123,31 +123,31 @@ const film = [
       id: 1,
       title: 'Ducobu 1',
       type: 'film',
-      poster_path: require('../images/ducobu.jpeg'), //on utilise ce syntaxe car cela pose un probleme lors de l'appele de ce propriété au rendu
+      poster_path: require('_images/ducobu.jpeg'), //on utilise ce syntaxe car cela pose un probleme lors de l'appele de ce propriété au rendu
    },
    {
       id: 2,
       title: 'Ducobu 2',
       type: 'film',
-      poster_path: require('../images/ducobu.jpeg'),
+      poster_path: require('_images/ducobu.jpeg'),
    },
    {
       id: 3,
       title: 'Ducobu 3',
       type: 'film',
-      poster_path: require('../images/ducobu.jpeg'),
+      poster_path: require('_images/ducobu.jpeg'),
    },
    {
       id: 4,
       title: 'Ducobu 4',
       type: 'film',
-      poster_path: require('../images/ducobu.jpeg'),
+      poster_path: require('_images/ducobu.jpeg'),
    },
    {
       id: 5,
       title: 'Ducobu 5',
       type: 'film',
-      poster_path: require('../images/ducobu.jpeg'),
+      poster_path: require('_images/ducobu.jpeg'),
    },
 ];
 
@@ -156,25 +156,25 @@ const genres = [
       id: 1,
       nom: 'Drama',
       type: 'genre',
-      poster_path: require('../images/ducobu.jpeg'),
+      poster_path: require('_images/ducobu.jpeg'),
    },
    {
       id: 2,
       nom: 'Action',
       type: 'genre',
-      poster_path: require('../images/ducobu.jpeg'),
+      poster_path: require('_images/ducobu.jpeg'),
    },
    {
       id: 3,
       nom: 'Horreur',
       type: 'genre',
-      poster_path: require('../images/ducobu.jpeg'),
+      poster_path: require('_images/ducobu.jpeg'),
    },
    {
       id: 4,
       nom: 'Education',
       type: 'genre',
-      poster_path: require('../images/ducobu.jpeg'),
+      poster_path: require('_images/ducobu.jpeg'),
    },
 ];
 

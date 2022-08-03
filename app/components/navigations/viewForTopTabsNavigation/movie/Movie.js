@@ -1,7 +1,7 @@
 import { Text, View, StyleSheet, ScrollView } from 'react-native';
-import { Colors } from '../../../../theme/Colors';
-import { film, genres } from '../../../../utils/data';
-import Section from '../../../reused/sectionWithCarousel/SectionWithCarousel';
+import { Colors } from '_theme/Colors';
+import { film, genres } from '_utils/data';
+import Section from '_components/reused/sectionWithCarousel/SectionWithCarousel';
 
 export default function Movie() {
    return (
