@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { SearchBar } from '@rneui/themed';
-import { Colors } from '../../theme/Colors';
-import TopTabs from '../../components/navigations/tabs/TopTabs';
+import { Colors } from '_theme/Colors';
+import TopTabs from '_components/navigations/tabs/TopTabs';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import HeaderGlobal from '../../components/header/HeaderGlobal';
+import HeaderGlobal from '_components/header/HeaderGlobal';
 
 export default function Home() {
    return (

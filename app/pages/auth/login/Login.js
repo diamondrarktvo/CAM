@@ -9,7 +9,7 @@ export default function Login() {
          <View style={styles.view_container}>
             <Image
                style={styles.login_image}
-               source={require('../../../images/Login.gif')}
+               source={require('_images/Login.gif')}
             />
             <View style={styles.view_formulaire}>
                <View style={styles.view_head_form}>

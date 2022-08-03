@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { Icon } from '@rneui/themed';
-import { Colors } from '../../../theme/Colors';
+import { Colors } from '_theme/Colors';
 import styles from './style';
 
 export default function Register() {
@@ -16,7 +16,7 @@ export default function Register() {
       <KeyboardAwareScrollView>
          <View style={styles.view_container}>
             <Image
-               source={require('../../../images/Register.gif')}
+               source={require('_images/Register.gif')}
                style={styles.register_image}
             />
             <View style={styles.view_formulaire}>

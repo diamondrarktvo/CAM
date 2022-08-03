@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { Icon } from '@rneui/themed';
-import { Colors } from '../../../../theme/Colors';
+import { Colors } from '_theme/Colors';
 
 export default function Anime() {
    return (

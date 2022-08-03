@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-native-snap-carousel';
 import { SafeAreaView, StyleSheet, Image, Text, View } from 'react-native';
-import { Colors } from './../../theme/Colors';
+import { Colors } from '_theme/Colors';
 
 export default function Caroussel({ data, annonce }) {
    const isCarousel = React.useRef(null);

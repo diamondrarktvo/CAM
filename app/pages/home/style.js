@@ -1,1 +1,1 @@
-import { Colors } from '../../theme/Colors';
+import { Colors } from '_theme/Colors';

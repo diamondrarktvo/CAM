@@ -1,12 +1,12 @@
 import { StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Colors } from '../../../theme/Colors';
+import { Colors } from '_theme/Colors';
 import { Icon } from '@rneui/themed';
 
 //import screen bottom tab
-import Home from '../../../pages/home/Home';
-import Profil from '../../../pages/profil/Profil';
-import Search from '../../../pages/search/Search';
+import Home from '_pages/home/Home';
+import Profil from '_pages/profil/Profil';
+import Search from '_pages/search/Search';
 
 const Tab = createBottomTabNavigator();
 

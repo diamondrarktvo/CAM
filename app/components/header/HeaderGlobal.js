@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { Colors } from '../../theme/Colors';
+import { Colors } from '_theme/Colors';
 
 export default function HeaderGlobal() {
    return (
