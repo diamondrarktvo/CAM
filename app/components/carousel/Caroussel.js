@@ -53,7 +53,7 @@ export default function Caroussel({ data, annonce }) {
                //fin des props spéficifique au section annonce
                renderItem={_renderItem}
                sliderWidth={150}
-               itemWidth={annonce === false ? 145 : 190}
+               itemWidth={annonce === false ? 145 : 360}
                inactiveSlideOpacity={0.9} //on uniformise tous les opacity
                inactiveSlideScale={1} //on uniformise tous les hauteur
                useScrollView={true}
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
    },
    poster_image_annonce: {
       height: 230,
-      width: 180,
+      width: 350,
       borderRadius: 10,
    },
    titre_film: {
