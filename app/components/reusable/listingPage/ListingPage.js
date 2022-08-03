@@ -1,13 +1,17 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { styles } from './../../navigations/viewForTopTabsNavigation/movie/style';
 
 export default function ListingPage() {
    return (
-      <View>
+      <View style={styles.view_container}>
          <Text>Welcome in listing page</Text>
       </View>
    );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+   view_container: {
+      flex: 1,
+      margin: 100,
+   },
+});
