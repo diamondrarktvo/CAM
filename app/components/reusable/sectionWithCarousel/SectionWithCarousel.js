@@ -20,7 +20,11 @@ export default function Section({
                   name={'chevron-right'}
                   color={Colors.black}
                   size={32}
-                  onPress={() => navigation.navigate(nameNav.listPage)}
+                  onPress={() => {
+                     navigation.navigate(nameNav.listPage, {
+                        titleScreen: titreSection,
+                     });
+                  }}
                />
             </View>
          )}
