@@ -1,9 +1,16 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
 import { Icon } from '@rneui/themed';
 import Caroussel from '_components/carousel/Caroussel';
 import { Colors } from '_theme/Colors';
+import { nameStackNavigation as nameNav } from '_utils/constante/NameStackNavigation';
+import { styles } from './styles';
 
-export default function Section({ annonce, titreSection, dataForCarousel }) {
+export default function Section({
+   annonce,
+   titreSection,
+   dataForCarousel,
+   navigation,
+}) {
    return (
       <View style={styles.section}>
          {annonce === false && (
@@ -13,7 +20,11 @@ export default function Section({ annonce, titreSection, dataForCarousel }) {
                   name={'chevron-right'}
                   color={Colors.black}
                   size={32}
-                  onPress={() => alert('clicker')}
+                  onPress={() => {
+                     navigation.navigate(nameNav.listPage, {
+                        titleScreen: titreSection,
+                     });
+                  }}
                />
             </View>
          )}
@@ -21,19 +32,3 @@ export default function Section({ annonce, titreSection, dataForCarousel }) {
       </View>
    );
 }
-
-const styles = StyleSheet.create({
-   section: {
-      marginVertical: 10,
-   },
-   titre_indicatif: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      marginVertical: 5,
-      marginHorizontal: 10,
-   },
-   titre_txt: {
-      fontSize: 24,
-      fontWeight: 'bold',
-   },
-});

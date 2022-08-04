@@ -4,9 +4,7 @@ import { Colors } from '_theme/Colors';
 import { Icon } from '@rneui/themed';
 
 //import screen bottom tab
-import Home from '_pages/home/Home';
-import Profil from '_pages/profil/Profil';
-import Search from '_pages/search/Search';
+import { Home, Search, Profil } from '_pages';
 
 const Tab = createBottomTabNavigator();
 
