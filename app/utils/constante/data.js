@@ -127,27 +127,59 @@ const film = [
    },
    {
       id: 2,
-      title: 'Ducobu 2',
+      title: 'Dracula',
       type: 'film',
-      poster_path: require('_images/ducobu.jpeg'),
+      poster_path: require('_images/dracula.jpeg'),
    },
    {
       id: 3,
-      title: 'Ducobu 3',
+      title: 'Jurassic Park',
       type: 'film',
-      poster_path: require('_images/ducobu.jpeg'),
+      poster_path: require('_images/jurassic.jpeg'),
    },
    {
       id: 4,
-      title: 'Ducobu 4',
+      title: 'Jurassic World',
       type: 'film',
-      poster_path: require('_images/ducobu.jpeg'),
+      poster_path: require('_images/jurassic2.jpeg'),
    },
    {
       id: 5,
-      title: 'Ducobu 5',
+      title: 'Fast furious',
       type: 'film',
-      poster_path: require('_images/ducobu.jpeg'),
+      poster_path: require('_images/fast.jpeg'),
+   },
+
+   {
+      id: 6,
+      title: 'Jurassic World',
+      type: 'film',
+      poster_path: require('_images/jurassic2.jpeg'),
+   },
+   {
+      id: 7,
+      title: 'Fast furious',
+      type: 'film',
+      poster_path: require('_images/fast.jpeg'),
+   },
+
+   {
+      id: 8,
+      title: 'Jurassic World',
+      type: 'film',
+      poster_path: require('_images/jurassic2.jpeg'),
+   },
+   {
+      id: 9,
+      title: 'Fast furious',
+      type: 'film',
+      poster_path: require('_images/fast.jpeg'),
+   },
+   {
+      id: 10,
+      title: 'Fast furious',
+      type: 'film',
+      poster_path: require('_images/jurassic.jpeg'),
    },
 ];
 
@@ -156,19 +188,19 @@ const genres = [
       id: 1,
       nom: 'Drama',
       type: 'genre',
-      poster_path: require('_images/ducobu.jpeg'),
+      poster_path: require('_images/fast.jpeg'),
    },
    {
       id: 2,
       nom: 'Action',
       type: 'genre',
-      poster_path: require('_images/ducobu.jpeg'),
+      poster_path: require('_images/dominion.jpeg'),
    },
    {
       id: 3,
       nom: 'Horreur',
       type: 'genre',
-      poster_path: require('_images/ducobu.jpeg'),
+      poster_path: require('_images/dracula.jpeg'),
    },
    {
       id: 4,

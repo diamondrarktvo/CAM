@@ -2,7 +2,7 @@ import { View, Text } from 'react-native';
 import { Icon } from '@rneui/themed';
 import Caroussel from '_components/carousel/Caroussel';
 import { Colors } from '_theme/Colors';
-import { nameStackNavigation as nameNav } from '_utils/constante/NameStackNavigation';
+import { nameStackNavigation as nameNav } from '_utils';
 import { styles } from './styles';
 
 export default function Section({
@@ -10,7 +10,16 @@ export default function Section({
    titreSection,
    dataForCarousel,
    navigation,
+   numberColumn,
 }) {
+   const _navigateToListingPage = () => {
+      navigation.navigate(nameNav.listPage, {
+         titleScreen: titreSection,
+         numberOfColumn: numberColumn,
+         dataToListing: dataForCarousel,
+      });
+   };
+
    return (
       <View style={styles.section}>
          {annonce === false && (
@@ -20,11 +29,7 @@ export default function Section({
                   name={'chevron-right'}
                   color={Colors.black}
                   size={32}
-                  onPress={() => {
-                     navigation.navigate(nameNav.listPage, {
-                        titleScreen: titreSection,
-                     });
-                  }}
+                  onPress={_navigateToListingPage}
                />
             </View>
          )}
