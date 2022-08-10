@@ -16,6 +16,7 @@ export default function Section({
       navigation.navigate(nameNav.listPage, {
          titleScreen: titreSection,
          numberOfColumn: numberColumn,
+         dataToListing: dataForCarousel,
       });
    };
 

@@ -1,3 +1,4 @@
+import { Colors } from '_theme/Colors';
 import React, { useCallback, useEffect, useState } from 'react';
 import {
    View,
@@ -7,17 +8,37 @@ import {
    Image,
    SafeAreaView,
 } from 'react-native';
-import { film } from '_utils';
 
 export default function ListingPage({ route }) {
    //all states or variables
    let numberOfColumn = route.params.numberOfColumn;
+   let dataToList = route.params.dataToListing;
 
    //all logics
    const _renderItem = useCallback(({ item }) => {
       return (
          <View style={styles.view_renderItem}>
-            <Image style={styles.image} source={item.poster_path} />
+            {item.type === 'film' ? (
+               <Image style={styles.image} source={item.poster_path} />
+            ) : (
+               <View style={{ position: 'relative' }} key={item.id}>
+                  <Image
+                     style={styles.poster_genre}
+                     source={item.poster_path} //require(film.urlImage) si path absolue et {{ uri : urlImage}} si lien
+                  />
+                  <View
+                     style={[
+                        StyleSheet.absoluteFillObject,
+                        styles.maskImageGenre,
+                     ]} //absoluteFillObject est une propriété reduisant l'écriture avec les propriétés position : absoluteFillObject de css
+                  ></View>
+                  <Text
+                     style={[StyleSheet.absoluteFillObject, styles.nom_genre]}
+                  >
+                     {item.nom}
+                  </Text>
+               </View>
+            )}
          </View>
       );
    }, []);
@@ -30,7 +51,7 @@ export default function ListingPage({ route }) {
    return (
       <SafeAreaView style={styles.container}>
          <FlatList
-            data={film}
+            data={dataToList}
             key={'_'}
             keyExtractor={_idKeyExtractor}
             renderItem={_renderItem}
@@ -61,5 +82,24 @@ const styles = StyleSheet.create({
       width: '100%',
       height: 190,
       borderRadius: 10,
+   },
+   //if data is genres
+   poster_genre: {
+      width: '100%',
+      height: 190,
+      borderRadius: 10,
+   },
+   maskImageGenre: {
+      backgroundColor: 'rgba(0, 0, 0, 0.6)',
+      borderRadius: 20,
+      width: '100%',
+   },
+   nom_genre: {
+      fontWeight: 'bold',
+      opacity: 0.9,
+      color: Colors.white,
+      fontSize: 24,
+      textAlign: 'center',
+      top: 80,
    },
 });
