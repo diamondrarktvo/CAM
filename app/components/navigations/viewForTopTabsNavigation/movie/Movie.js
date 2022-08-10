@@ -1,5 +1,5 @@
 import { Text, View, ScrollView } from 'react-native';
-import { film, genres } from '_utils/constante/data';
+import { film, genres } from '_utils';
 import Section from '_components/reusable/sectionWithCarousel/SectionWithCarousel';
 import { styles } from './style';
 
