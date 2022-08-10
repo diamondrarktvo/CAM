@@ -10,10 +10,12 @@ export default function Section({
    titreSection,
    dataForCarousel,
    navigation,
+   numberColumn,
 }) {
    const _navigateToListingPage = () => {
       navigation.navigate(nameNav.listPage, {
          titleScreen: titreSection,
+         numberOfColumn: numberColumn,
       });
    };
 

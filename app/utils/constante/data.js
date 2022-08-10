@@ -175,6 +175,12 @@ const film = [
       type: 'film',
       poster_path: require('_images/fast.jpeg'),
    },
+   {
+      id: 10,
+      title: 'Fast furious',
+      type: 'film',
+      poster_path: require('_images/jurassic.jpeg'),
+   },
 ];
 
 const genres = [
