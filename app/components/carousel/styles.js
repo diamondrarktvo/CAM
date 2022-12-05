@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
    poster_image_annonce: {
       height: 230,
       width: 350,
-      borderRadius: 10,
+      borderRadius: 20,
    },
    titre_film: {
       fontSize: 16,
